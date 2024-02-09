@@ -46,9 +46,7 @@ function App() {
     return (
         <div className="App">
             <div className="mock_image">
-                <img alt="" src={"/images/faintLines_image.png"} style={{
-                    margin: 'auto',
-                }}/>
+                <img alt="" src={"/images/faintLines_image.png"} />
             </div>
             <header>
                 <img alt="" src="/images/faintLines.svg"/>

@@ -34,3 +34,6 @@ header img {
   z-index: 999999999;
   opacity: 0.33;
 }
+.mock_image img {
+  margin: auto;
+}

@@ -17,7 +17,8 @@ function App() {
     }, [])
     const onCancel = useCallback((event) => {
         console.log(event.detail)
-        const modalProps = cancelMessages[Math.round(Math.random() * 5)]
+        const messagesLength = cancelMessages.length - 1
+        const modalProps = cancelMessages[Math.round(Math.random() * messagesLength)]
         if (!event.detail.allowCancel)
             showModalNow({
                 ...modalProps,

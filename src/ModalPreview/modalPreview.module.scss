@@ -17,7 +17,6 @@
   }
   .modal_preview_holder {
     position: relative;
-    zoom: 0.5;
   }
   .modal_preview_overlay {
     bottom: 0;
@@ -41,6 +40,9 @@
   .modal_preview_shadow {
     border-radius: 8px;
     box-shadow: 8px 8px 18px rgba(111, 129, 138, 0.5);
+    scale: 0.5;
+    transform-origin: 0 0;
+    width: fit-content;
   }
   @keyframes rotateTwice {
     0% {

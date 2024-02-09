@@ -11,7 +11,7 @@ export const messagesAutoRun = [
     },
     {
         button: '2/5, CONTINUE TO 3',
-        text: 'Those auto-generated messages are entering the queue each five seconds to demonstrate the queue feature.',
+        text: 'Those auto-generated messages are entering the queue each two seconds to demonstrate the queue feature.',
         title: 'THE QUEUE!',
     },
     {

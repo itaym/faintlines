@@ -26,15 +26,15 @@ function App() {
     }, [])
 
     useEffect(() => {
-        const fiveSeconds = 5_000
-        let milliseconds = fiveSeconds
+        const twoSeconds = 2_000
+        let milliseconds = 0
         const timeHandlers = []
 
         for (let modalProps of messagesAutoRun) {
             timeHandlers.push(setTimeout(() => {
                 showModal(modalProps)
             }, milliseconds))
-            milliseconds += fiveSeconds
+            milliseconds += twoSeconds
         }
         return () => {
             for (let timeHandler of timeHandlers) {

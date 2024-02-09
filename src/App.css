@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+header {
+  font-family: "Oswald", 'Source Sans 3', sans-serif;
+  font-weight: 100;
+  color: #FFFFFF;
+}
+header img {
+  height: 31px;
+  margin: 32px auto 16px;
+  width: auto;
+}
+.preview_holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 80px 0;
+}
+.preview_holder > * {
+  margin: 40px;
+}
+.mock_image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+/**
+ * If you want to compare the design to the UI (first modal only)
+ * change the display from 'none' to 'flex'. Reload and wait 5 seconds.
+ */
+  display: none;
+  z-index: 999999999;
+  opacity: 0.33;
+}

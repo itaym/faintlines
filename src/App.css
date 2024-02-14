@@ -28,7 +28,7 @@ header img {
   left: 0;
 /**
  * If you want to compare the design to the UI (first modal only)
- * change the display from 'none' to 'flex'. Reload and wait 5 seconds.
+ * change the display from 'none' to 'flex'. Reload and wait 2 seconds.
  */
   display: none;
   z-index: 999999999;

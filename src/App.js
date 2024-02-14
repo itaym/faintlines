@@ -55,7 +55,9 @@ function App() {
             </header>
             <div className="preview_holder">
                 {messagesExamples.map((modalPros) =>
-                    <ModalPreview {...{
+                    <ModalPreview
+                        key={JSON.stringify(modalPros)}
+                        {...{
                         ...modalPros,
                         allowCancel: true,
                     }} />

@@ -1,7 +1,7 @@
-import './App.css';
 import FaintLinesModal, { initFaintLinesModal, clearAllModals, showModal, showModalNow } from './components/FaintLinesModal'
 import ModalPreview from './components/ModalPreview'
 import ResizeAnimation from './components/ResizeAnimation'
+import styles from './App.module.scss';
 import { cancelMessages, messagesAutoRun, messagesExamples } from './data'
 import { useCallback, useEffect } from 'react'
 
@@ -45,8 +45,8 @@ function App() {
         }
     }, [])
     return (
-        <div className="App">
-            <div className="mock_image">
+        <div className={styles.App}>
+            <div className={styles.mock_image}>
                 <img alt="" src={"/images/faintLines_image.png"} />
             </div>
             <header>
@@ -54,8 +54,8 @@ function App() {
                 <hr/>
                 <span>Home assignment executed by <b>Itay Merchav</b>, Front End position</span>
             </header>
-            <div className="preview_holder">
-                <div className="preview_holder_animate">
+            <div className={styles.preview_holder}>
+                <div className={styles.preview_holder_animate}>
                 {messagesExamples.map((modalPros) =>
                     <ResizeAnimation key={JSON.stringify(modalPros)}>
                         <ModalPreview

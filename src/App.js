@@ -1,7 +1,7 @@
 import './App.css';
-import FaintLinesModal, { initFaintLinesModal, clearAllModals, showModal, showModalNow } from './FaintLinesModal'
-import ModalPreview from './ModalPreview'
-import ResizeAnimation from './ResizeAnimation'
+import FaintLinesModal, { initFaintLinesModal, clearAllModals, showModal, showModalNow } from './components/FaintLinesModal'
+import ModalPreview from './components/ModalPreview'
+import ResizeAnimation from './components/ResizeAnimation'
 import { cancelMessages, messagesAutoRun, messagesExamples } from './data'
 import { useCallback, useEffect } from 'react'
 

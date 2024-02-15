@@ -1,6 +1,6 @@
 import Modal from './Modal'
 import ModalController from './ModalController'
-import SingleInstanceComponent from './SingleInstanceComponent'
+import SingleInstanceComponent from '../SingleInstanceComponent'
 import reducer from './redux/reducers'
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'

@@ -1,4 +1,4 @@
-import Conditional from '../Conditional'
+import Conditional from '../../Conditional'
 import Modal from '../Modal'
 import React, { useCallback, useMemo } from 'react'
 import { modalDelRequest } from '../redux/actions'

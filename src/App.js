@@ -1,6 +1,7 @@
 import './App.css';
 import FaintLinesModal, { initFaintLinesModal, clearAllModals, showModal, showModalNow } from './FaintLinesModal'
 import ModalPreview from './ModalPreview'
+import ResizeAnimation from './ResizeAnimation'
 import { cancelMessages, messagesAutoRun, messagesExamples } from './data'
 import { useCallback, useEffect } from 'react'
 
@@ -54,14 +55,18 @@ function App() {
                 <span>Home assignment executed by <b>Itay Merchav</b>, Front End position</span>
             </header>
             <div className="preview_holder">
+                <div className="preview_holder_animate">
                 {messagesExamples.map((modalPros) =>
-                    <ModalPreview
-                        key={JSON.stringify(modalPros)}
-                        {...{
-                        ...modalPros,
-                        allowCancel: true,
-                    }} />
+                    <ResizeAnimation key={JSON.stringify(modalPros)}>
+                        <ModalPreview
+                            key={JSON.stringify(modalPros)}
+                            {...{
+                            ...modalPros,
+                            allowCancel: true,
+                        }} />
+                    </ResizeAnimation>
                 )}
+                </div>
             </div>
             {/** It does not matter how many times FaintLinesModal will     */}
             {/** appear nor where it appears. It will only be rendered once.*/}

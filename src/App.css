@@ -11,13 +11,17 @@ header img {
   margin: 32px auto 16px;
   width: auto;
 }
-.preview_holder {
+.preview_holder > .preview_holder_animate {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 80px 0;
+  transition: all 13s ease;
 }
-.preview_holder > * {
+.preview_holder > .preview_holder_animate {
+  animation: slideInUD 3s ease;
+}
+.preview_holder > .preview_holder_animate > * {
   margin: 40px;
 }
 .mock_image {
@@ -36,4 +40,14 @@ header img {
 }
 .mock_image img {
   margin: auto;
+}
+@keyframes slideInUD {
+  from {
+    transform: translate(0,-1000%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

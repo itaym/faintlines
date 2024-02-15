@@ -52,38 +52,150 @@ export const messagesExamples = [
         text: 'Welcome, digital explorer! Your mission is to navigate the vast digital landscape of the virtual world through your simulated mobile phone. As you embark on this journey, you\'ll encounter various challenges and tasks that mimic real-life scenarios, from managing social media accounts to solving puzzles and interacting with virtual friends.',
         title: 'THE MISSION!',
     },
+    {
+        button: 'PROCEED',
+        text: 'Congratulations! You just won the jackpot in the virtual casino!',
+        title: 'JACKPOT WINNER!',
+    },
+    {
+        button: 'NEXT CHAPTER',
+        text: 'In the next chapter of your adventure, you find yourself face-to-face with a dragon guarding a treasure chest.',
+        title: 'DRAGON ENCOUNTER!',
+    },
+    {
+        button: 'READ IT NOW',
+        text: 'An ancient scroll has been discovered in the depths of the virtual library. It holds the key to unlocking a long-lost secret.',
+        title: 'ANCIENT SCROLL UNVEILED!',
+    },
+    {
+        button: 'ACCEPT THE CHALLENGE',
+        text: 'Attention, brave warrior! Your skills are needed to defeat the dark sorcerer threatening the virtual kingdom.',
+        title: 'CALL TO ARMS!',
+    },
 
 ]
 
 export const cancelMessages = [
     {
         button: 'REMIND ME!',
-        text: 'You just missed something! Want to see it again?',
-        title: 'WHOOPSIE!',
-        allowCancel: true,
-    },
-    {
-        button: 'REVEAL AGAIN',
-        text: 'You\'re missing out! Do you want to take another look?',
-        title: 'OH SNAP!',
-        allowCancel: true,
-    },
-    {
-        button: 'ONE MORE TIME',
-        text: 'Wait! Did you mean to cancel that? Want to see it once more?',
+        text: 'Whoopsie! Looks like you missed something. Want a second chance?',
         title: 'OOPSIE DAISY!',
         allowCancel: true,
     },
     {
+        button: 'REVEAL AGAIN',
+        text: 'Oh snap! You blinked and missed it. Want to peek again?',
+        title: 'BLINK AND MISS!',
+        allowCancel: true,
+    },
+    {
+        button: 'ONE MORE TIME',
+        text: 'Wait! Did you just hit the snooze button? Want to wake up and see it once more?',
+        title: 'SNOOZE ALERT!',
+        allowCancel: true,
+    },
+    {
         button: 'SHOW AGAIN',
-        text: 'Hold up! You cancelled something. Wanna see it again?',
-        title: 'HEY THERE!',
+        text: 'Hey there! You just canceled your entertainment. Want to reconsider?',
+        title: 'CANCELLATION NATION!',
         allowCancel: true,
     },
     {
         button: 'REPLAY IT!',
-        text: 'Wait a second! Want to catch that again?',
-        title: 'IN A JIFFY!',
+        text: 'Hold your horses! Want to rewind and relive the moment?',
+        title: 'HORSEPLAY!',
+        allowCancel: true,
+    },
+    {
+        button: 'TRY AGAIN',
+        text: 'Oops! Butterfingers? Give it another shot!',
+        title: 'BUTTERFINGERS ALERT!',
+        allowCancel: true,
+    },
+    {
+        button: 'VIEW IT AGAIN',
+        text: 'Missed the memo? Let\'s rewind and get you up to speed!',
+        title: 'MEMO MISS!',
+        allowCancel: true,
+    },
+    {
+        button: 'GIVE ME A REMINDER',
+        text: 'Oops! Forgot to pay attention? Let me remind you!',
+        title: 'ATTENTION DEFICIT!',
+        allowCancel: true,
+    },
+    {
+        button: 'REVEAL MORE',
+        text: 'Did you blink? You missed it! Let\'s open your eyes and see it again!',
+        title: 'BLINK AND MISS!',
+        allowCancel: true,
+    },
+    {
+        button: 'SHOW IT ONCE MORE',
+        text: 'Wait! Did you accidentally skip the fun part? Let\'s rewind!',
+        title: 'FUN SKIPPER!',
+        allowCancel: true,
+    },
+    {
+        button: 'REPLAY NOW',
+        text: 'Lost in space? Let\'s bring you back to reality and replay!',
+        title: 'SPACE CADET!',
+        allowCancel: true,
+    },
+    {
+        button: 'REMIND AGAIN',
+        text: 'Feeling forgetful? Let me help you remember!',
+        title: 'FORGET-ME-NOT!',
+        allowCancel: true,
+    },
+    {
+        button: 'REDO IT',
+        text: 'Did you accidentally hit the cancel button on fun? Let\'s redo it!',
+        title: 'FUN CANCELER!',
+        allowCancel: true,
+    },
+    {
+        button: 'VIEW ONCE MORE',
+        text: 'Lost in the Bermuda Triangle of distraction? Let\'s navigate back!',
+        title: 'BERMUDA DISTRACTION!',
+        allowCancel: true,
+    },
+    {
+        button: 'REVIEW NOW',
+        text: 'Lost in the maze of missed opportunities? Let\'s find our way back!',
+        title: 'OPPORTUNITY MAZE!',
+        allowCancel: true,
+    },
+    {
+        button: 'SHOW IT AGAIN',
+        text: 'Did you blink? Or was it a temporary glitch in the matrix? Let\'s find out!',
+        title: 'MATRIX GLITCH!',
+        allowCancel: true,
+    },
+    {
+        button: 'REDO THAT',
+        text: 'Oops! Hit the wrong button on the remote of life? Let\'s rewind!',
+        title: 'LIFE REMOTE!',
+        allowCancel: true,
+    },
+    {
+        button: 'REVISIT NOW',
+        text: 'Lost in the time warp of forgetfulness? Let\'s travel back together!',
+        title: 'TIME WARP!',
+        allowCancel: true,
+    },
+    {
+        button: 'REMIND ME AGAIN',
+        text: 'Memory playing hide and seek? Let me help you find it!',
+        title: 'HIDE AND SEEK!',
+        allowCancel: true,
+    },
+    {
+        button: 'REPEAT IT NOW',
+        text: 'Did you accidentally mute the fun? Let\'s turn up the volume and repeat!',
+        title: 'FUN MUTER!',
         allowCancel: true,
     }
 ]
+
+

@@ -57,9 +57,9 @@ function App() {
             <div className={styles.preview_holder}>
                 <div className={styles.preview_holder_animate}>
                 {messagesExamples.map((modalPros) =>
-                    <ResizeAnimation key={JSON.stringify(modalPros)}>
+                    <ResizeAnimation
+                        key={JSON.stringify(modalPros)}>
                         <ModalPreview
-                            key={JSON.stringify(modalPros)}
                             {...{
                             ...modalPros,
                             allowCancel: true,

@@ -12,17 +12,17 @@ header img {
   width: auto;
 }
 .preview_holder > .preview_holder_animate {
+  animation: slideInUD 3s ease;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 40px;
   padding: 80px 0;
   transition: all 13s ease;
-}
-.preview_holder > .preview_holder_animate {
-  animation: slideInUD 3s ease;
-}
-.preview_holder > .preview_holder_animate > * {
-  margin: 40px;
+
+  & > * {
+    margin: 40px;
+  }
 }
 .mock_image {
   position: fixed;

@@ -197,5 +197,3 @@ export const cancelMessages = [
         allowCancel: true,
     }
 ]
-
-

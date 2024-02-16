@@ -1,7 +1,7 @@
 .modal_preview {
   border-radius: 9999px;
-  border: 8px double #A8A8A8;
-  color: #FFFFFF;
+  border: 8px double rgba(168, 168, 168, 1);
+  color: rgba(255, 255, 255, 1);
   cursor: pointer;
   height: 208px;
   width: 208px;
@@ -9,8 +9,8 @@
     animation: rotateTwice 1s forwards;
   }
   .modal_preview_banner {
-    background-color: #2C2C2C;
-    border-bottom: 1px solid #A8A8A8;
+    background-color: rgba(44, 44, 44, 1);
+    border-bottom: 1px solid rgba(168, 168, 168, 1);
     font-family: "Oswald", 'Source Sans 3', sans-serif;
     font-size: 32px;
     font-weight: 100;
@@ -22,7 +22,7 @@
   .modal_preview_overlay {
     bottom: 0;
     box-sizing: border-box;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1);
     font-size: 88px;
     font-weight: 900;
     height: 338px;
@@ -40,7 +40,7 @@
 
   .modal_preview_shadow {
     border-radius: 8px;
-    box-shadow: 8px 8px 18px rgba(111, 129, 138, 0.5);
+    box-shadow: 8px 8px 18px rgba(255, 255, 255, 0.5);
     scale: 0.5;
     transform-origin: 0 0;
     width: fit-content;

@@ -4,7 +4,7 @@
 header {
   font-family: "Oswald", 'Source Sans 3', sans-serif;
   font-weight: 100;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 1);
 }
 header img {
   height: 31px;
@@ -25,11 +25,11 @@ header img {
   }
 }
 .mock_image {
-  position: fixed;
-  top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 /**
  * If you want to compare the design to the UI (first modal only)
  * change the display from 'none' to 'flex'. Reload and wait 2 seconds.
@@ -43,7 +43,7 @@ header img {
 }
 @keyframes slideInUD {
   from {
-    transform: translate(0,-1000%);
+    transform: translateY(-1000%);
     opacity: 0;
   }
   to {

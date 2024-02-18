@@ -12,12 +12,12 @@ header img {
   width: auto;
 }
 .preview_holder > .preview_holder_animate {
-  animation: slideInUD 3s ease;
+  animation: slideInUD 4.5s ease;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 40px;
-  padding: 80px 0;
+  padding: 80px 0 220px;
   transition: all 13s ease;
 
   & > * {

@@ -3,56 +3,51 @@
   height: fit-content;
   width: fit-content;
 }
-
-@keyframes slideInLR {
+@mixin slideInAnimation {
   from {
-    transform: translate(-10%, -147px);
+    opacity: 0;
+    rotate: 0;
+    scale: 0;
+  }
+
+  80% {
+    scale: 1.5;
   }
   to {
-    transform: translate(0);
+    opacity: 1;
+    rotate: 720deg;
+    scale: 1;
   }
+}
+@keyframes slideInLR {
+  @include slideInAnimation
 }
 @keyframes slideInRL {
-  from {
-    transform: translate(10%, -147px);
-  }
-  to {
-    transform: translate(0);
-  }
+  @include slideInAnimation
 }
 @keyframes slideInLR_ {
-  from {
-    transform: translate(-10%, -147px);
-  }
-  to {
-    transform: translate(0);
-  }
+  @include slideInAnimation
 }
 @keyframes slideInRL_ {
-  from {
-    transform: translate(10%, -147px);
-  }
-  to {
-    transform: translate(0);
-  }
+  @include slideInAnimation
 }
 
-@media screen and (max-width: 704.999px) {
+@media screen and (max-width: 704.000px) {
   .resize_animation {
     animation: slideInRL 3s ease forwards;
   }
 }
-@media screen and (min-width: 705px) and (max-width: 1007.999px) {
+@media screen and (min-width: 704.001px) and (max-width: 1008.000px) {
   .resize_animation {
     animation: slideInLR 3s ease forwards;
   }
 }
-@media screen and (min-width: 1008px) and (max-width: 1311.999px) {
+@media screen and (min-width: 1008.001px) and (max-width: 1312.000px) {
   .resize_animation {
     animation: slideInRL_ 3s ease forwards;
   }
 }
-@media screen and (min-width: 1312px) {
+@media screen and (min-width: 1312.001px) {
   .resize_animation {
     animation: slideInLR_ 3s ease forwards;
   }

@@ -96,23 +96,21 @@
     @include resizePerspective
   }
   .resize_animation:first-of-type {
-    animation: resize_1_ + $name 3s ease forwards;
-  }
-  .resize_animation:first-of-type {
+    animation: resize_1_#{$name} 3s ease forwards;
     &~ .resize_animation {
-      animation: resize_2_ + $name 3s ease forwards;
+      animation: resize_2_#{$name} 3s ease forwards;
       &~ .resize_animation {
-        animation: resize_3_ + $name 3s ease forwards;
+        animation: resize_3_#{$name} 3s ease forwards;
         &~ .resize_animation {
-          animation: resize_4_ + $name 3s ease forwards;
+          animation: resize_4_#{$name} 3s ease forwards;
           &~ .resize_animation {
-            animation: resize_5_ + $name 3s ease forwards;
+            animation: resize_5_#{$name} 3s ease forwards;
             &~ .resize_animation {
-              animation: resize_6_ + $name 3s ease forwards;
+              animation: resize_6_#{$name} 3s ease forwards;
               &~ .resize_animation {
-                animation: resize_7_ + $name 3s ease forwards;
+                animation: resize_7_#{$name} 3s ease forwards;
                 &~ .resize_animation {
-                  animation: resize_8_ + $name 3s ease forwards;
+                  animation: resize_8_#{$name} 3s ease forwards;
                 }
               }
             }

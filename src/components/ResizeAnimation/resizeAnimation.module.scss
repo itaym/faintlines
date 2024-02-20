@@ -3,52 +3,173 @@
   height: fit-content;
   width: fit-content;
 }
-@mixin slideInAnimation {
+@mixin resizeRotation {
   from {
     opacity: 0;
     rotate: 0;
     scale: 0;
   }
-
-  80% {
-    scale: 1.5;
-  }
+  50% { scale: 1.5; }
+  60% { scale: 0.5; }
+  75% { scale: 0.5; }
   to {
     opacity: 1;
     rotate: 720deg;
     scale: 1;
   }
 }
-@keyframes slideInLR {
-  @include slideInAnimation
+@mixin resizeRotation3D {
+  from {
+    opacity: 0;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    scale: 0;
+  }
+  50% { scale: 1.5; }
+  60% { scale: 0.5; }
+  75% { scale: 0.5; }
+  to {
+    opacity: 1;
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    scale: 1;
+  }
 }
-@keyframes slideInRL {
-  @include slideInAnimation
+@mixin resizeTranslate {
+  from {
+    opacity: 0;
+    transform: translate(-250%, -250%);
+    scale: 0;
+  }
+  50% { scale: 1.5; }
+  60% { scale: 0.5; }
+  75% { scale: 0.5; }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    scale: 1;
+  }
 }
-@keyframes slideInLR_ {
-  @include slideInAnimation
-}
-@keyframes slideInRL_ {
-  @include slideInAnimation
+@mixin resizePerspective {
+  from {
+    opacity: 0;
+    perspective: 0;
+    rotate: 0;
+    scale: 0;
+  }
+  50% { scale: 1.5; }
+  60% { scale: 0.5; }
+  75% { scale: 0.5; }
+  to {
+    opacity: 1;
+    perspective: 1px;
+    rotate: -720deg;
+    scale: 1;
+  }
 }
 
-@media screen and (max-width: 704.000px) {
-  .resize_animation {
-    animation: slideInRL 3s ease forwards;
+@mixin create-keyframes($name) {
+  @keyframes #{$name} {
+    @content;
   }
+}
+@mixin animationBundle($name) {
+  @include create-keyframes(resize_1_#{$name}) {
+    @include resizeRotation
+  }
+  @include create-keyframes(resize_2_#{$name}) {
+    @include resizeRotation3D
+  }
+  @include create-keyframes(resize_3_#{$name}) {
+    @include resizeTranslate
+  }
+  @include create-keyframes(resize_4_#{$name}) {
+    @include resizePerspective
+  }
+  @include create-keyframes(resize_5_#{$name}) {
+    @include resizeRotation
+  }
+  @include create-keyframes(resize_6_#{$name}) {
+    @include resizeRotation3D
+  }
+  @include create-keyframes(resize_7_#{$name}) {
+    @include resizeTranslate
+  }
+  @include create-keyframes(resize_8_#{$name}) {
+    @include resizePerspective
+  }
+  .resize_animation:first-of-type {
+    animation: resize_1_ + $name 3s ease forwards;
+  }
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+      animation: resize_2_ + $name 3s ease forwards;
+  }}
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+    &~ .resize_animation {
+      animation: resize_3_ + $name 3s ease forwards;
+  }}}
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+      animation: resize_4_ + $name 3s ease forwards;
+  }}}}
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+      animation: resize_5_ + $name 3s ease forwards;
+  }}}}}
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+      animation: resize_6_ + $name 3s ease forwards;
+  }}}}}}
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+      animation: resize_7_ + $name 3s ease forwards;
+  }}}}}}}
+  .resize_animation:first-of-type {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+    &~ .resize_animation {
+      animation: resize_7_ + $name 3s ease forwards;
+  }}}}}}}}
+}
+@media screen and (max-width: 704.000px) {
+  @include animationBundle(first)
 }
 @media screen and (min-width: 704.001px) and (max-width: 1008.000px) {
-  .resize_animation {
-    animation: slideInLR 3s ease forwards;
-  }
+  @include animationBundle(second)
 }
 @media screen and (min-width: 1008.001px) and (max-width: 1312.000px) {
-  .resize_animation {
-    animation: slideInRL_ 3s ease forwards;
-  }
+  @include animationBundle(third)
 }
-@media screen and (min-width: 1312.001px) {
-  .resize_animation {
-    animation: slideInLR_ 3s ease forwards;
-  }
+@media screen and (min-width: 1312.001px) and (max-width: 1616.000px) {
+  @include animationBundle(forth)
+}
+@media screen and (min-width: 1616.001px) and (max-width: 1920.000px) {
+  @include animationBundle(fifth)
+}
+@media screen and (min-width: 1920.001px) and (max-width: 2220.000px) {
+  @include animationBundle(sixth)
+}
+@media screen and (min-width: 2220.001px) and (max-width: 2528.000px) {
+  @include animationBundle(seventh)
+}
+@media screen and (min-width: 2528.001px) {
+  @include animationBundle(eighth)
 }

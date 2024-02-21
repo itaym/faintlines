@@ -198,6 +198,7 @@
     background: linear-gradient(to top, rgba(115, 225, 70, 1) 50%, rgba(132, 233, 79, 1) 65%, rgba(161, 245, 95, 1) 100%);
     border-radius: 99px;
     border: 1px solid black;
+    color: rgba(35, 60, 20, 1);
     font-family: "Oswald", 'Source Sans 3', sans-serif;
     font-size: 20px;
     letter-spacing: 0.4px;
@@ -229,6 +230,7 @@
     background: linear-gradient(to top, rgba(25, 35, 35, 1) 20%, rgba(30, 40, 45, 1) 70%, rgba(36, 47, 52, 1) 88%);
     border-radius: 14px;
     border: 2px solid rgba(70, 85, 90, 1);
+    box-shadow: rgba(0, 0, 0, 1) 2px 2px 2px;
     padding-bottom: 40px;
     position: relative;
   }

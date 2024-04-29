@@ -1,14 +1,12 @@
 import Conditional from '../../Conditional'
 import Modal from '../Modal'
-import React, { useCallback, useMemo } from 'react'
+import React, { useCallback } from 'react'
 import { modalDelRequest } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
-import { useRef } from 'react'
 
 const ModalController = ({ onOKPress, onCancelPress }) => {
 
     const dispatch = useDispatch()
-    const modalRef = useRef(<Modal key="staticKey" />)
     const modalReq = useSelector(({ modalQueue }) => modalQueue[0])
 
     const onCancel = useCallback(() => {
@@ -23,16 +21,14 @@ const ModalController = ({ onOKPress, onCancelPress }) => {
         onOKPress(event)
     }, [dispatch, onOKPress, modalReq])
 
-    const modalClone = useMemo(() =>
-        React.cloneElement(modalRef.current, {
-            ...modalReq,
-            onCancel,
-            onOK,
-        }), [modalReq, onCancel, onOK])
-
     return (
         <Conditional condition={!!modalReq}>
-            {modalClone}
+            <Modal
+                key="staticKey"
+                {...modalReq}
+                onCancel={onCancel}
+                onOK={onOK}
+            />
         </Conditional>
     )
 }

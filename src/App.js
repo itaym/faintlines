@@ -10,14 +10,12 @@ function App() {
     clearAllModals()
 
     const onOK = useCallback((event) => {
-        console.log(event.detail)
         if (event.detail.allowCancel) {
             if (event.detail.previous)
                 showModalNow(event.detail.previous)
         }
     }, [])
     const onCancel = useCallback((event) => {
-        console.log(event.detail)
         const messagesLength = cancelMessages.length - 1
         const modalProps = cancelMessages[Math.round(Math.random() * messagesLength)]
         if (!event.detail.allowCancel)

@@ -1,4 +1,5 @@
 import styles from './modal.module.scss'
+import React from 'react'
 
 const Modal = ({ onCancel, onOK, button, title, text, preview = false }) =>
     <div className={preview ? styles.modal_preview : styles.modal}>
@@ -16,4 +17,4 @@ const Modal = ({ onCancel, onOK, button, title, text, preview = false }) =>
         </div>
     </div>
 
-export default Modal
+export default React.memo(Modal)

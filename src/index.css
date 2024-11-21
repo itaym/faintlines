@@ -60,6 +60,7 @@
 }
 
 html, body {
+  background-color: #0a0909;
   background-image: url("/public/images/sky.webp");
   background-repeat: no-repeat;
   background-size: cover;
